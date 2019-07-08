@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MachineState
 {
-    class StateTransition
+    public class StateTransition
     {
         readonly ProcessState CurrentState;
         readonly string Command;
