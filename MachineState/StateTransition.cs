@@ -7,12 +7,12 @@ namespace MachineState
     class StateTransition
     {
         readonly ProcessState CurrentState;
-        readonly Command Command;
+        readonly string Command;
 
-        public StateTransition(ProcessState currentState, Command command)
+        public StateTransition(ProcessState currentState, ICommand command)
         {
             CurrentState = currentState;
-            Command = command;
+            Command = command.GetType().FullName;
         }
 
         public override int GetHashCode()
